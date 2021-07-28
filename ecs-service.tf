@@ -9,6 +9,6 @@ resource "aws_ecs_service" "default" {
   deployment_minimum_healthy_percent = 0
 
   lifecycle {
-    ignore_changes = [task_definition]
+    ignore_changes = [task_definition, desired_count]
   }
 }
